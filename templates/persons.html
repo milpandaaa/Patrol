@@ -1,0 +1,18 @@
+{% extends 'navbar.html' %}
+
+{% block body%}
+        <br>
+    <div class="container">
+    {% csrf_token %}
+    {% for person in data_p %}
+  <dt><a href="{% url 'person_url' person.id %}" >{{ person.name }}</a> <br> {{ person.service_number }}</dt>
+        <dd>{{person.year_of_birth }} <br>
+        {{ person.position }} <br>
+            {{ person.date_of_enrollment }} <br>
+            {{ person.boat_number }}
+        </dd>
+    {% endfor %}
+
+    <a class="button"><a href="{% url 'person_add_url' %}">Add patrol</a></a>
+    </div>
+{% endblock %}

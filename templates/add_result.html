@@ -1,0 +1,29 @@
+{% extends 'navbar.html' %}
+
+{% block body%}
+
+    <div class="overlay">
+<!-- LOGN IN FORM by Omar Dsoky -->
+<form action="" method="post">
+     {% csrf_token %}
+   <!--   con = Container  for items in the form-->
+    <header class="head-form">
+      <h2>Add result</h2>
+   </header>
+   <div class="con">
+      <!--   user name -->
+        <!--   user name Input-->
+         <input class="form-input" id="txt-input"name="date" id="username" type="text" placeholder="date" required>
+      <br>
+       <input class="form-input" id="txt-input"name="boat_number" id="username" type="text" placeholder="boat number" required>
+      <br>
+       <input class="form-input" id="txt-input"name="district" id="username" type="text" placeholder="district" required>
+      <br>
+       <input class="form-input" id="txt-input"name="number_of_detainees" id="username" type="text" placeholder="number of detainees" required>
+      <br>
+      <button class="log-in"> Add </button>
+   </div>
+</form>
+</div>
+
+{% endblock %}

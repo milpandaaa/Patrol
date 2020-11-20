@@ -1,0 +1,48 @@
+{% extends 'index.html' %}
+
+{% block body%}
+    <div class="overlay">
+<!-- LOGN IN FORM by Omar Dsoky -->
+<form action="" method="post">
+     {% csrf_token %}
+   <!--   con = Container  for items in the form-->
+   <div class="con">
+   <!--     Start  header Content  -->
+   <header class="head-form">
+      <h2>Sign In</h2>
+      <!--     A welcome message or an explanation of the login form -->
+      <p>sign in here using your username and password</p>
+   </header>
+   <!--     End  header Content  -->
+   <br>
+   <div class="field-set">
+
+      <!--   user name -->
+         <span class="input-item">
+           <i class="fa fa-user-circle"></i>
+         </span>
+        <!--   user name Input-->
+         <input class="form-input" name="username" id="username" type="text" placeholder="@UserName" required>
+      <br>
+      <span class="input-item">
+        <i class="fa fa-key"></i>
+       </span>
+      <!--   Password Input-->
+      <input class="form-input" type="password" placeholder="Password" name="password1"  id="password"required>
+       <br>
+       <input class="form-input" type="password" placeholder="Password" name="password2" id="password" required>
+<!--      Show/hide password  -->
+
+
+      <br>
+<!--        buttons -->
+<!--      button LogIn -->
+      <button class="log-in"> Sign In </button>
+   </div>
+  </div>
+
+  <!-- End Form -->
+</form>
+</div>
+
+{% endblock %}

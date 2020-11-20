@@ -1,0 +1,33 @@
+{% extends 'navbar.html' %}
+
+{% block body%}
+
+    <div class="overlay">
+<!-- LOGN IN FORM by Omar Dsoky -->
+<form action="" method="post">
+     {% csrf_token %}
+   <!--   con = Container  for items in the form-->
+    <header class="head-form">
+      <h2>Add patrol</h2>
+   </header>
+   <div class="con">
+      <!--   user name -->
+        <!--   user name Input-->
+         <input class="form-input" id="txt-input"name="name" id="username" type="text" placeholder="name" required>
+      <br>
+       <input class="form-input" id="txt-input"name="service_number" id="username" type="text" placeholder="service number" required>
+      <br>
+       <input class="form-input" id="txt-input"name="position" id="username" type="text" placeholder="position" required>
+      <br>
+       <input class="form-input" id="txt-input"name="date_of_enrollment" id="username" type="text" placeholder="date of enrollment" required>
+      <br>
+       <input class="form-input" id="txt-input"name="year_of_birth" id="username" type="text" placeholder="year of birth" required>
+      <br>
+       <input class="form-input" id="txt-input"name="boat_number" id="username" type="text" placeholder="boat number" required>
+      <br>
+      <button class="log-in"> Add </button>
+   </div>
+</form>
+</div>
+
+{% endblock %}
